@@ -28,7 +28,7 @@ void selection_sort(int *array, size_t size);
 void bubble_sort(int *array, size_t size);
 void shell_sort(int *array, size_t size);
 void swap(int *a, int *b);
-void swap_at_beg(listint_t *node1, listint_t *node2);
+listint_t *swap_at_beg(listint_t *node1, listint_t *node2);
 void swap_at_end(listint_t *node1, listint_t *node2);
 void swap_at_middle(listint_t *node1, listint_t *node2);
 #endif

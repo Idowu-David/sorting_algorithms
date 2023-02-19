@@ -19,7 +19,7 @@ void insertion_sort_list(listint_t **list)
 		if (ptr->n > curr->n)
 		{
 			if (ptr->prev == NULL)
-				swap_at_beg(ptr, curr);
+				*list = swap_at_beg(ptr, curr);
 			else if (curr->next == NULL)
 				swap_at_end(ptr, curr);
 			else
@@ -45,7 +45,7 @@ void insertion_sort_list(listint_t **list)
  * @node2: second node
  * Return: void
  */
-void swap_at_beg(listint_t *node1, listint_t *node2)
+listint_t *swap_at_beg(listint_t *node1, listint_t *node2)
 {
 	listint_t *ptr;
 
@@ -54,6 +54,7 @@ void swap_at_beg(listint_t *node1, listint_t *node2)
 	node1->next = ptr;
 	node2->next = node1;
 	node2->prev = NULL;
+	return (node2);
 }
 
 /**
