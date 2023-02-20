@@ -32,6 +32,12 @@ void bubble_sort(int *array, size_t size)
 	}
 }
 
+/**
+ * swap - swaps the position of two integers in an arrat
+ * @a: first node
+ * @b: second node
+ * Return: void
+ */
 void swap(int *a, int *b)
 {
 	int temp = *a;
