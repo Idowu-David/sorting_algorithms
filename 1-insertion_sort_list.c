@@ -19,11 +19,20 @@ void insertion_sort_list(listint_t **list)
 		if (ptr->n > curr->n)
 		{
 			if (ptr->prev == NULL)
+			{
+				printf("Beginning\n");
 				*list = swap_at_beg(ptr, curr);
+			}
 			else if (curr->next == NULL)
+			{
+				printf("End\n");
 				swap_at_end(ptr, curr);
+			}
 			else
+			{
+				printf("Middle\n");
 				swap_at_middle(ptr, curr);
+			}
 			print_list(*list);
 			ptr = *list;
 			curr = ptr->next;
