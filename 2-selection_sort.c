@@ -1,7 +1,8 @@
 #include "sort.h"
 
 /**
- * selection_sort - sorts an array of integers using the Selection sort algorithm
+ * selection_sort - sorts an array of integers using the
+ * Selection sort algorithm
  * @array: pointer to the array of integers
  * @size: size of the array
  * Return: void
@@ -11,7 +12,7 @@ void selection_sort(int *array, size_t size)
 	int *least = NULL, check_swap;
 	size_t i, j;
 
-	if (size <= 2)
+	if (size <= 2 || array == NULL)
 		return;
 	for (i = 0; i < size; i++)
 	{
@@ -40,8 +41,8 @@ void selection_sort(int *array, size_t size)
 
 void swap(int *a, int *b)
 {
-        int temp = *a;
+	int temp = *a;
 
-        *a = *b;
-        *b = temp;
+	*a = *b;
+	*b = temp;
 }
