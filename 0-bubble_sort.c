@@ -28,19 +28,3 @@ void bubble_sort(int *array, size_t size)
 	break;
 	}
 }
-
-/**
-* swap - swaps two integers
-* @a: first integer
-* @b: second integer
-* Return: nothing, void
-*/
-
-void swap(int *a, int *b)
-{
-	int temp;
-
-	temp = *a;
-	*a = *b;
-	*b = temp;
-}
